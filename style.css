@@ -1,0 +1,118 @@
+:root {
+  --bg: #f3f4f8;
+  --card: #ffffff;
+  --text: #1f2430;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-dark: #4338ca;
+  --danger: #dc2626;
+  --danger-dark: #b91c1c;
+  --border: #e2e4ec;
+  --ok: #15803d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+h1 { margin: 0; font-size: 2rem; }
+h2 { margin: 0 0 16px; font-size: 1.2rem; }
+
+.subtitle { margin: 4px 0 24px; color: var(--muted); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Profile output */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 8px 16px;
+  margin: 0;
+}
+.profile-grid dt { color: var(--muted); }
+.profile-grid dd { margin: 0; font-weight: 600; }
+
+/* Form */
+form { display: flex; flex-direction: column; gap: 8px; }
+label { font-size: 0.9rem; font-weight: 600; }
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+input:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+input.invalid { border-color: var(--danger); }
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover { background: var(--accent-dark); }
+button.danger { background: var(--danger); }
+button.danger:hover { background: var(--danger-dark); }
+
+form button { margin-top: 8px; }
+
+/* List */
+#hobby-list {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+#hobby-list li {
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+}
+#hobby-list li.empty {
+  color: var(--muted);
+  border-left-color: var(--border);
+  font-style: italic;
+}
+
+.list-controls { display: flex; gap: 8px; flex-wrap: wrap; }
+.list-controls input { flex: 1 1 160px; }
+
+/* Status messages */
+.message { min-height: 1.4em; margin: 8px 0 0; font-size: 0.9rem; color: var(--ok); }
+.message.error { color: var(--danger); }
+
+@media (max-width: 480px) {
+  .profile-grid { grid-template-columns: 1fr; gap: 2px; }
+  .profile-grid dd { margin-bottom: 8px; }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 5 - JavaScript Basics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Profile Manager</h1>
+    <!-- PART 1: Profile object + arithmetic output -->
+    <section class="card" id="profile-section">
+      <h2>Your Profile</h2>
+      <dl class="profile-grid">
+        <dt>Name</dt>
+        <dd id="out-name"></dd>
+
+        <dt>Birth year</dt>
+        <dd id="out-birthYear"></dd>
+
+        <dt>Developer?</dt>
+        <dd id="out-isDeveloper"></dd>
+
+        <dt>Current age</dt>
+        <dd id="out-age"></dd>
+
+        <dt>Months old (approx.)</dt>
+        <dd id="out-months"></dd>
+
+        <dt>Hobbies count</dt>
+        <dd id="out-hobbiesCount"></dd>
+      </dl>
+    </section>
+
+    <!-- PART 2: Form -->
+    <section class="card">
+      <h2>Create / Update Profile</h2>
+      <form id="profile-form" novalidate>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="e.g. Aibek">
+
+        <label for="birthYear">Birth Year</label>
+        <input type="number" id="birthYear" name="birthYear" placeholder="e.g. 2005">
+
+        <button type="submit" id="profile-btn">Create / Update Profile</button>
+        <p id="form-message" class="message" role="status"></p>
+      </form>
+    </section>
+
+    <!-- PART 3: List manipulation -->
+    <section class="card">
+      <h2>My Hobbies</h2>
+      <ul id="hobby-list"></ul>
+
+      <div class="list-controls">
+        <input type="text" id="new-item" placeholder="New hobby...">
+        <button type="button" id="add-btn">Add Item</button>
+        <button type="button" id="remove-btn" class="danger">Remove Item</button>
+      </div>
+      <p id="list-message" class="message" role="status"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
