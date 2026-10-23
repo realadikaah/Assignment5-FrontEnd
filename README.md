@@ -1,8 +1,7 @@
 # Assignment #5. JavaScript Basics (DOM Manipulation & Events)
 
-**Name:** YOUR NAME  
-**Group:** YOUR GROUP  
-**GitHub Pages:** https://YOUR-USERNAME.github.io/YOUR-REPO/
+**Name:** Adilzhan Tolegen  
+**Group:** SE-2538  
 
 ---
 
